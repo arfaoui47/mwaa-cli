@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "mwaa-cli"
+version = "0.0.1"
+description = "MWAA CLI and REST API Wrapper"
+authors = ["Atef Arfaoui <arfatef@gmail.com>"]
+
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/arfaoui47/mwaa-rest"
+repository = "https://github.com/arfaoui47/mwaa-rest"
+keywords = ["mwaa", "cli", "rest", "api"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: FastAPI",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.20.26"
+requests = "^2.26.0"
+click = "^8.0.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+mwaa-cli = 'mwaa_cli:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
