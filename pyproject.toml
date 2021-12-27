@@ -6,8 +6,8 @@ authors = ["Atef Arfaoui <arfatef@gmail.com>"]
 
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/arfaoui47/mwaa-rest"
-repository = "https://github.com/arfaoui47/mwaa-rest"
+homepage = "https://github.com/arfaoui47/mwaa-cli"
+repository = "https://github.com/arfaoui47/mwaa-cli"
 keywords = ["mwaa", "cli", "rest", "api"]
 classifiers = [
     "Environment :: Web Environment",
@@ -23,6 +23,7 @@ python = "^3.8"
 boto3 = "^1.20.26"
 requests = "^2.26.0"
 click = "^8.0.3"
+fastapi = "^0.70.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

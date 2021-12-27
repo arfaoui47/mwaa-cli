@@ -1,0 +1,10 @@
+#!/bin/bash
+
+case "$1" in
+start)
+   docker-compose -f ./docker-compose.yaml up --build
+   ;;
+*)
+   echo "No command specified, displaying help"
+   ;;
+esac
