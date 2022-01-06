@@ -26,10 +26,10 @@ def get_cli_parameters(environment_name: str) -> CLIParameters:
 def validate_cmd(command: str) -> bool:
     try:
         available_cmds = "\n   - ".join(AVAILABLE_CMDS)
-        msg = f"Command: '{command}' not found. Available commands:\n   - {available_cmds}"
-        assert command in AVAILABLE_CMDS, msg 
+        msg            = f"Command: '{command}' not found. Available commands:\n   - {available_cmds}"
+        assert command in AVAILABLE_CMDS, msg
     except AssertionError as e:
-        raise RuntimeError(e) 
+        raise RuntimeError(e)
 
 
 def send_request(cli_parameters: CLIParameters, command: str) -> Tuple[str, str]:
@@ -52,8 +52,8 @@ def send_request(cli_parameters: CLIParameters, command: str) -> Tuple[str, str]
 
 
 @click.command()
-@click.option('--environment-name', '-e', prompt='Environment name', help='Environment name')
-@click.option('--command', '-c', prompt='Command', help='Command')
+@click.option('--environment-name', '-e', prompt="Environment name", help="Environment name")
+@click.option('--command'         , '-c', prompt='Command'         , help='Command')
 def main(environment_name: str, command: str) -> None:
     validate_cmd(command)
     cli_parameters = get_cli_parameters(environment_name)
